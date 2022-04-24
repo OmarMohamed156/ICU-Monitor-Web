@@ -104,39 +104,39 @@ const Configuration = () => {
             <div className="configContainer">
                 <h1>Add new Patient <input type='checkbox' className="checkbox"  onChange={()=>{setShowPatientForm(showPatientForm ? false :true)}} /> </h1>
                 {showPatientForm && 
-                    <div className="configForm">
+                    <form onSubmit={addPatient}  className="configForm">
                         <input type="text" placeholder="Patient name" className="configInputField" value={name} onChange={(e) => setName(e.target.value)} />
                         <input type="text" placeholder="Patient code" className="configInputField" value={code} onChange={(e) => setCode(e.target.value)} />
                         <input type="number" placeholder="Patient Room ID" className="configInputField" value={patientRoomID} onChange={(e) => setPatientRoomID(e.target.value)} />
-                        <button className="config-btn" onClick={addPatient}><span  style={{color:"white"}} >Add Patient</span></button>           
-                    </div>
+                        <button className="config-btn" type="submit"><span  style={{color:"white"}} >Add Patient</span></button>           
+                    </form>
                 }
                 <h1>Add new Room   <input type='checkbox' className="checkbox"  onChange={()=>{setShowRoomForm(showRoomForm ? false :true)}} /> </h1>
                 {showRoomForm &&
-                    <div className="configForm">
+                    <form onSubmit={addRoom} className="configForm">
                         <input type="text" placeholder="Room ID" className="configInputField" value={roomID} onChange={(e) => setRoomID(e.target.value)} />
                         <input type="number" placeholder="Room Capacity" className="configInputField" value={roomCapacity} onChange={(e) => setRoomCapacity(e.target.value)} />
-                        <button className="config-btn" onClick={addRoom}><span  style={{color:"white"}} >Add Room</span></button>           
-                    </div>
+                        <button className="config-btn" type="submit"><span  style={{color:"white"}} >Add Room</span></button>           
+                    </form>
                 }
                 <h1>Add new Sensor   <input type='checkbox' className="checkbox"  onChange={()=>{setShowSensorForm(showSensorForm ? false :true)}} /> </h1>
                 {showSensorForm &&
-                    <div className="configForm">
+                    <form onSubmit={addSensor} className="configForm">
                         <input placeholder='Serial Number' className="configInputField" value={serial} onChange={(e)=>{setSerial(e.target.value)}} />
                         <input type="text" placeholder="Sensor Type" className="configInputField" value={sensortype} onChange={(e) => setSensorType(e.target.value)} />
                         <input type="number" placeholder="Sensor Room ID" className="configInputField" value={sensorroomid} onChange={(e) => setSensorRoomId(e.target.value)} />
                         <input type="number" placeholder="Sensor Patient ID" className="configInputField" value={sensorpatientid} onChange={(e) => setSensorPatientId(e.target.value)} />
-                        <button className="config-btn" onClick={addSensor}><span  style={{color:"white"}} >Add Room</span></button>           
-                    </div>
+                        <button className="config-btn" type="submit"><span  style={{color:"white"}} >Add Room</span></button>           
+                    </form>
                 }
                 <h1>Edit sensor data  <input type='checkbox' className="checkbox"  onChange={()=>{setShowPatchForm(showPatchForm ? false :true)}} /> </h1>
                 {showPatchForm &&
-                    <div className="configForm">
+                    <form onSubmit={patchSensor} className="configForm">
                         <input type='number' placeholder='Wanted Serial Number' className="configInputField" value={patchserialnumber} onChange={(e)=>{setPatchserialnumber(e.target.value)}}/>
                         <input type='number' placeholder='Desired Room ID' className="configInputField" value={patchroomid} onChange={(e)=>{setPatchroomid(e.target.value)}}/>
                         <input type='text' placeholder='Patient-ID' className="configInputField" value={patchpatientid} onChange={(e)=>{setPatchpatientid(e.target.value)}}/>
-                        <button className="config-btn" onClick={patchSensor}><span  style={{color:"white"}} >Patch Sensor</span></button>           
-                    </div>
+                        <button className="config-btn" type="submit"><span  style={{color:"white"}} >Patch Sensor</span></button>           
+                    </form>
                 }
             </div>
         </>
