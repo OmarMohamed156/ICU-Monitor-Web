@@ -1,5 +1,5 @@
 .card{
-    width: 50%;
+    width: 60%;
     background-color: #f7f7f7;
     border-radius: 5px;
     padding: 20px;
@@ -76,7 +76,7 @@
     border: 1px solid #3902b0;
     padding: 5px;
 }
-.config-btn{
+.config-btn,.room-btn{
     background-color:#3902b0;
     border: none;
     padding: 10px 20px;
