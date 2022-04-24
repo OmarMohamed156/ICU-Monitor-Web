@@ -1,11 +1,20 @@
 import Login from './screens/Login'
-import './App.css';
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import './App.css'
+import Configuration from './screens/Configuration';
+
 
 function App() {
   return (
-    <div className="App">
-      <Login/>
-    </div>
+    // <div>
+    //   <Login/>
+    // </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login/>} />
+        <Route path="/Configuration" element={<Configuration/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

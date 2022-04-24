@@ -1,6 +1,6 @@
 import React ,{useState} from "react";
 import loginPhoto from '/home/omarmohamed/icu-web/src/Imgs/login-photo.jpg';
-
+import { Link } from "react-router-dom";
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -25,6 +25,7 @@ const Login = () => {
                 <input type="text" placeholder="Email" className="inputField" value={email} onChange={(e) => setEmail(e.target.value)} />
                 <input type="password" className="inputField" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 <button className="login-btn" onClick={loginHandler}><span  style={{color:"white"}} >Login</span></button>
+                <Link to="/Configuration" style={{color:"#3902b0",textDecoration:"none",marginTop:"10px"}}  >Add Configuration</Link>
             </div>
             <div className="loginImgContainer" >
                 <img width='100%'   height='90%' src={loginPhoto} alt="login" className="login-photo" />
