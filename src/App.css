@@ -1,3 +1,10 @@
+.card{
+    width: 50%;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+}
 .loginContainer{
     width: 100%;
     background-color: #e6dff5;
@@ -49,7 +56,7 @@
     padding-top: 15%;
     flex-direction: column;
 }
-.configContainer{
+.configContainer,.roomsContainer{
     padding-left: 5%;
     background-color: #e6dff5;
     display: flex;

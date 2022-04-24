@@ -3,6 +3,7 @@ import { BrowserRouter,Routes,Route } from "react-router-dom";
 import './App.css'
 import Configuration from './screens/Configuration';
 import axios from 'axios';
+import Rooms from './screens/Rooms';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login/>} />
         <Route path="/Configuration" element={<Configuration/>} />
+        <Route path="/Rooms" element={<Rooms/>} />
       </Routes>
     </BrowserRouter>
   );
