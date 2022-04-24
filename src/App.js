@@ -5,6 +5,7 @@ import Configuration from './screens/Configuration';
 import axios from 'axios';
 import Mainscreen from './screens/MainScreen';
 import Room from './screens/Room';
+import Sensors from './screens/Sensors';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/Configuration" element={<Configuration/>} />
         <Route path="/allRooms" element={<Mainscreen/>} />
         <Route path="/Room" element={<Room/>} />
+        <Route path="/Sensors" element={<Sensors/>} />
       </Routes>
     </BrowserRouter>
   );

@@ -36,13 +36,13 @@ const Mainscreen=()=>{
     return(
         <>
             <div className="roomsContainer">
-                <h1>Rooms</h1>
+                <h1>Available Rooms</h1>
                 {data && data.map((item,index)=>{
                     return(
                         <Card key={index}>
                             <h3>Room: {item.room_id}</h3>
                             <h3>No of Patients: {item.patients.length}</h3>
-                            <button  onClick={()=>{navigate('Room',{
+                            <button  onClick={()=>{navigate('/Room',{
                                 state:{
                                     roomPatients: item.patients,
                                     roomID: item.room
